@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:18:14 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/08 15:31:25 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/09 17:01:46 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,16 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 int	ft_atoi(char *str);
 char	*ft_strnstr(char *str, char *c, int n);
 char	*ft_strdup(const char *s);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+void 	ft_putchar_fd(char c, int fd);
+void 	ft_putstr_fd(char *s, int fd);
+char 	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void 	ft_putendl_fd(char *s, int fd);
+void 	ft_putnbr_fd(int n, int fd);
+void 	*ft_calloc(size_t nmemb, size_t size);
 
 #endif

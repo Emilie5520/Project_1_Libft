@@ -6,7 +6,7 @@
 #    By: edouvier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/08 12:34:35 by edouvier          #+#    #+#              #
-#    Updated: 2019/10/08 15:31:05 by edouvier         ###   ########.fr        #
+#    Updated: 2019/10/09 17:00:27 by edouvier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,19 @@ SRCS = ft_memset.c \
        ft_strlcat.c \
        ft_strlcpy.c \
        ft_strnstr.c \
-       ft_strdup.c
+       ft_strdup.c \
+       ft_substr.c \
+       ft_strjoin.c \
+       ft_strtrim.c \
+       ft_split.c \
+       ft_itoa.c \
+       ft_strmapi.c \
+       ft_putchar_fd.c \
+       ft_putstr_fd.c \
+       ft_putendl_fd.c \
+       ft_putnbr_fd.c \
+       ft_calloc.c \
+
 
 OBJ   = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra -Werror

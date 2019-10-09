@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 13:38:10 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/09 10:50:31 by edouvier         ###   ########.fr       */
+/*   Created: 2019/10/09 14:23:52 by edouvier          #+#    #+#             */
+/*   Updated: 2019/10/09 14:48:30 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int	ft_strlen(const char *str)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	if (n == -2147483648)
 	{
-		i++;
+		ft_putstr_fd("-2147483648", fd);
+		return ;
 	}
-	return (i);
+	if (n < 0)
+	{
+		n = n * -1;
+		ft_putchar_fd('-', fd);
+	}
+	if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd((n % 10) + '0', fd);
+	}
+	else
+		ft_putchar_fd(n + '0', fd);
 }
