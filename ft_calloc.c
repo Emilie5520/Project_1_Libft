@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 17:01:53 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/09 18:23:05 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/10 10:20:23 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void 	*ft_calloc(size_t nmemb, size_t size)
 	return (pointeur);
 }
 
-int		main()
+/*int		main()
 {
 	int i, n, o;
 	int *a;
@@ -74,4 +74,4 @@ int		main()
 		printf("%d ",b[i]);
 	}
 	free( b );
-}
+}*/

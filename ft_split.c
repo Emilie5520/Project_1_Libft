@@ -6,16 +6,11 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:54:07 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/09 16:59:06 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/10 10:19:58 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
-
-char	**ft_split(char const *s, char c)
-{
-
-}
 
 void	ft_putchar(char c)
 {
@@ -33,7 +28,7 @@ void	ft_putstr(char *str)
 	}
 }
 
-int	main()
+/*int	main()
 {
 	char *str = "   hello les gens";
 	char **tab = ft_split(str, ' ');
@@ -45,4 +40,4 @@ int	main()
 		write(1, "\n", 1);
 		i++;
 	}
-}
+}*/

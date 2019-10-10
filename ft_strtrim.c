@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 11:07:56 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/09 16:47:25 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/10 13:48:12 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ int	is_charset(char *charset, char c)
 	while (charset[i])
 	{
 		if (charset[i] == c)
-		{
 			return (1);
-		}
 		i++;
 	}
 	return (0);
@@ -63,10 +61,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-int	main()
+/*int	main()
 {
 	char str[] = "ouiouiouioui on va faire     le test       ouiouioui";
 	char set[] = "oui";
 	printf("%s", ft_strtrim(str, set));
 	return (0);	
-}
+}*/
