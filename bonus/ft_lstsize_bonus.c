@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 14:26:41 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/14 18:11:57 by edouvier         ###   ########.fr       */
+/*   Created: 2019/10/14 15:03:45 by edouvier          #+#    #+#             */
+/*   Updated: 2019/10/14 17:32:04 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
-char	*ft_strnstr(char *str, char *c, int n)
+int	ft_lstsize(t_list *lst)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	if (c[j] == '\0')
-		return (str);
-	while (str[i] != '\0' && i < n)
-	{
-		j = 0;
-		while (str[i + j] == c[j] && i + j < n)
-		{
-			j++;
-			if (c[j] == '\0')
-				return (str + i);
-		}
-		i++;
-	}
-	return (NULL);
+	if (lst == NULL)
+		return (NULL);
+	return (ft_lstsize(lst->next) + 1);
 }

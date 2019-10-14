@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 14:26:41 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/14 18:11:57 by edouvier         ###   ########.fr       */
+/*   Created: 2019/10/11 13:57:25 by edouvier          #+#    #+#             */
+/*   Updated: 2019/10/14 17:31:30 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
-char	*ft_strnstr(char *str, char *c, int n)
+t_list	*ft_lstnew(void *content)
 {
-	int	i;
-	int	j;
+	t_list*		nouvelElement;
+	
+	t_list = malloc(sizeof(s_list));
+	if (t_list == NULL)
+		return (NULL);
+	nouvelElement->content = content;
+	nouvelElement->next = NULL;
 
-	i = 0;
-	j = 0;
-	if (c[j] == '\0')
-		return (str);
-	while (str[i] != '\0' && i < n)
-	{
-		j = 0;
-		while (str[i + j] == c[j] && i + j < n)
-		{
-			j++;
-			if (c[j] == '\0')
-				return (str + i);
-		}
-		i++;
-	}
-	return (NULL);
+	return (nouvelElement);
 }

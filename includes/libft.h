@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:18:14 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/11 13:22:43 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/14 17:24:40 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct s_list
+typedef struct		s_list
 {
-	void 	*content;
-	struct 	s_list *next;
-} 		t_list;
-
+	void 		*content;
+	struct 		s_list *next;
+} 			t_list;
 
 void	*ft_memset (void *str, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
@@ -51,13 +50,18 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
-void 	ft_putchar_fd(char c, int fd);
-void 	ft_putstr_fd(char *s, int fd);
-char 	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void 	ft_putendl_fd(char *s, int fd);
-void 	ft_putnbr_fd(int n, int fd);
-void 	*ft_calloc(size_t nmemb, size_t size);
-// BONUS
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	*ft_calloc(size_t nmemb, size_t size);
+
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **alst, t_list *new);
+int	ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **alst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
 
 #endif

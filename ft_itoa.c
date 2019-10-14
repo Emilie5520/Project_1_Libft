@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:33:51 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/10 15:55:37 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/14 18:36:27 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strdupl(const char *s)
 	int	i;
 	int	j;
 	int	k;
-	char	*dest;
-	char	*src;
+	char		*dest;
+	char		*src;
 
 	i = 0;
 	j = 0;
@@ -58,13 +58,13 @@ int		is_malloc(int n)
 char	*ft_itoa(int n)
 {
 	char		*str;
-	int			count;
+	int		count;
 	long int	num;
 
 	count = 0;
 	num = n;
 	if (num == -2147483648)
-		return(ft_strdupl((const char*)"-2147483648"));
+		return (ft_strdupl((const char*)"-2147483648"));
 	if (num < 0)
 	{
 		num = -num;
@@ -78,7 +78,7 @@ char	*ft_itoa(int n)
 		str[0] = '0';
 	while (num > 0)
 	{
-		str[count - 1] = (num % 10)  + '0';
+		str[count - 1] = (num % 10) + '0';
 		num = num / 10;
 		count--;
 	}

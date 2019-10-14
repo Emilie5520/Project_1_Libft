@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 10:34:10 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/09 10:57:14 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/14 18:45:44 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	int	len;
-	int	i;
-	int	j;
+	int		len;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;

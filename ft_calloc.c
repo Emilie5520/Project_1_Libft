@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 17:01:53 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/10 10:20:23 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/14 18:44:13 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void 	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	i;
 	void	**pointeur;
-	int	len;
-	
+	int		len;
+
 	i = 0;
 	len = nmemb * size;
 	if (nmemb == 0 || size == 0)
@@ -57,7 +57,6 @@ void 	*ft_calloc(size_t nmemb, size_t size)
 		printf("%d ",a[i]);
 	}
 	free( a );
-
 
 	printf("\n\n\n=== ft_calloc ===\n");
 	printf("Number of elements to be entered:");

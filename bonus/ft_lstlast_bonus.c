@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 14:26:41 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/14 18:11:57 by edouvier         ###   ########.fr       */
+/*   Created: 2019/10/14 15:11:34 by edouvier          #+#    #+#             */
+/*   Updated: 2019/10/14 15:27:33 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
-char	*ft_strnstr(char *str, char *c, int n)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	if (c[j] == '\0')
-		return (str);
-	while (str[i] != '\0' && i < n)
+	if (lst == NULL)
+		return (NULL);
+	if (lst->next == NULL)
+		return (lst);
+	while (lst->next != NULL)
 	{
-		j = 0;
-		while (str[i + j] == c[j] && i + j < n)
-		{
-			j++;
-			if (c[j] == '\0')
-				return (str + i);
-		}
-		i++;
+		lst = lst->next;
 	}
-	return (NULL);
+	return (lst);
 }

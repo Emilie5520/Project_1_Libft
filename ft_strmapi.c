@@ -6,15 +6,15 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:21:00 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/09 14:21:50 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/14 18:37:59 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "includes/libft.h"i
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
+	int		i;
 	char	*str;
 
 	i = 0;

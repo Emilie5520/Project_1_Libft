@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:54:07 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/11 12:34:51 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/14 18:18:21 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	strlen_like(char *str, char c)
 {
 	int	i;
 	int	j;
-	
+
 	i = 0;
 	j = 0;
 	while (str[i] != '\0')
@@ -45,7 +45,7 @@ int	count_words(char *str, char c)
 	return (count);
 }
 
-char	*strdup_like(char *src, char c)
+/*char	*strdup_like(char *src, char c)
 {
 	int	i;
 	int	j;
@@ -70,7 +70,6 @@ char	**ft_split(char const *s, char c)
 	int	i;
 	int	j;
 	char	**res;
-	int	words;
 	char	*str;
 
 	i = 0;
@@ -78,11 +77,10 @@ char	**ft_split(char const *s, char c)
 	str = (char *)s;
 	if (s == NULL || c == 0)
 		return (NULL);
-	words = count_words(str, c);
-	res = (char **)malloc(sizeof(char *) * words + 1);
+	res = (char **)malloc(sizeof(char *) * count_words(str, c) + 1);
 	if (res == NULL)
 		return (NULL);
-	while (i < words)
+	while (i < count_words(str, c))
 	{
 		while (str[j] && str[j] == c)
 			j++;
@@ -93,17 +91,16 @@ char	**ft_split(char const *s, char c)
 	}
 	res[i] = 0;
 	return (res);
-		
 }
 
-/*void	ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 void	ft_putstr(char *str)
 {
 	int	i;
-	
+
 	i = 0;
 	while (str[i])
 	{

@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 11:07:56 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/10 13:48:12 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/14 18:35:24 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int	is_charset(char *charset, char c)
+int	is_charset(char const *charset, char c)
 {
 	int	i;
 
@@ -34,26 +34,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	i;
 	int	j;
 	int	l;
-	char	*setnew;
-	char	*s1new;
-	
+
 	i = 0;
 	j = ft_strlen(s1) - 1;
 	l = 0;
-	setnew = (char *)set;
-	s1new = (char *)s1;
 	if (s1 == NULL || set == NULL)
 		return (NULL);
 	str = (char*)malloc(sizeof(char) * ft_strlen(s1));
 	if (str == NULL)
 		return (NULL);
-	while (is_charset(setnew, s1new[i]) && s1new[i] != '\0')
+	while (is_charset(set, s1[i]) && s1[i] != '\0')
 		i++;
-	while (is_charset(setnew, s1new[j]) && j >= 0)
+	while (is_charset(set, s1[j]) && j >= 0)
 		j--;
 	while (i <= j)
 	{
-		str[l] = s1new[i];
+		str[l] = s1[i];
 		l++;
 		i++;
 	}
