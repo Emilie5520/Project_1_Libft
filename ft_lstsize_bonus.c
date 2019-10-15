@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/14 15:11:34 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/14 15:27:33 by edouvier         ###   ########.fr       */
+/*   Created: 2019/10/14 15:03:45 by edouvier          #+#    #+#             */
+/*   Updated: 2019/10/15 13:22:57 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	if (lst == NULL)
-		return (NULL);
-	if (lst->next == NULL)
-		return (lst);
-	while (lst->next != NULL)
-	{
-		lst = lst->next;
-	}
-	return (lst);
+		return (0);
+	return (ft_lstsize(lst->next) + 1);
 }

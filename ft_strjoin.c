@@ -6,11 +6,11 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 10:34:10 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/14 18:45:44 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/15 10:50:38 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -40,11 +40,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i + j] = '\0';
 	return (str);
 }
-
-/*int	main()
-{
-	char s1[] = "onvaetretoutproche";
-	char s2[] = "etsijaipasenvie";
-	printf("%s", ft_strjoin(s1, s2));
-	return (0);
-}*/

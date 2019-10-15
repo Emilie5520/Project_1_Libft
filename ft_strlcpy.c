@@ -6,11 +6,11 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:30:25 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/08 14:47:29 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/15 10:55:38 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n)
 {
@@ -34,14 +34,3 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n)
 	}
 	return (j);
 }
-
-/*int main()
-{
-        char dest[20];
-        char src[] = "ontestontestontest";
-        int size = sizeof(dest);
-
-        printf("%d\n",ft_strlcpy(dest,src,size));
-        printf("%s\n",dest);
-
-}*/

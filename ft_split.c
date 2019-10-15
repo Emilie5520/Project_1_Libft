@@ -6,12 +6,11 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:54:07 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/14 18:18:21 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/15 10:43:31 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
-#include <stdio.h>
+#include "libft.h"
 
 int	strlen_like(char *str, char c)
 {
@@ -45,10 +44,10 @@ int	count_words(char *str, char c)
 	return (count);
 }
 
-/*char	*strdup_like(char *src, char c)
+char	*strdup_like(char *src, char c)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*dest;
 
 	i = 0;
@@ -67,8 +66,8 @@ int	count_words(char *str, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	**res;
 	char	*str;
 
@@ -92,34 +91,3 @@ char	**ft_split(char const *s, char c)
 	res[i] = 0;
 	return (res);
 }
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-void	ft_putstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
-}
-
-int	main()
-{
-	char *str = "0 1   2 3 4 5 6";
-	//printf("%d", count_words(str, ' '));
-	char **tab = ft_split(str, ' ');
-	int	i;
-	i = 0;
-	while (tab[i] != 0)
-	{
-		ft_putstr(tab[i]);
-		write(1, "\n", 1);
-		i++;
-	}
-}*/

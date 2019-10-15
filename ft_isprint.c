@@ -6,11 +6,11 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:33:20 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/08 13:33:32 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/15 10:02:15 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:26:41 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/14 18:11:57 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/15 10:57:52 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(char *str, char *c, int n)
 {

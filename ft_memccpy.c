@@ -6,11 +6,11 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:36:56 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/08 14:15:36 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/15 10:26:39 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {

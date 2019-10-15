@@ -6,11 +6,11 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:53:16 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/14 18:45:16 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/15 10:44:32 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

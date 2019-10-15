@@ -6,11 +6,11 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:23:52 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/09 14:48:30 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/15 10:35:29 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

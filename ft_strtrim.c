@@ -6,13 +6,21 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 11:07:56 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/14 18:35:24 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/15 16:04:12 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
+
+int	ft_strlen_trim(char const *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
 
 int	is_charset(char const *charset, char c)
 {
@@ -31,16 +39,16 @@ int	is_charset(char const *charset, char c)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	int	i;
-	int	j;
-	int	l;
+	int		i;
+	int		j;
+	int		l;
 
 	i = 0;
-	j = ft_strlen(s1) - 1;
+	j = ft_strlen_trim(s1) - 1;
 	l = 0;
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	str = (char*)malloc(sizeof(char) * ft_strlen(s1));
+	str = (char*)malloc(sizeof(char) * ft_strlen_trim(s1));
 	if (str == NULL)
 		return (NULL);
 	while (is_charset(set, s1[i]) && s1[i] != '\0')
@@ -56,11 +64,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[l] = '\0';
 	return (str);
 }
-
-/*int	main()
-{
-	char str[] = "ouiouiouioui on va faire     le test       ouiouioui";
-	char set[] = "oui";
-	printf("%s", ft_strtrim(str, set));
-	return (0);	
-}*/

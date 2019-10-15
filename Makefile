@@ -6,7 +6,7 @@
 #    By: edouvier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/08 12:34:35 by edouvier          #+#    #+#              #
-#    Updated: 2019/10/14 14:44:07 by edouvier         ###   ########.fr        #
+#    Updated: 2019/10/15 13:29:36 by edouvier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,12 @@ SRCS = ft_memset.c \
        ft_putnbr_fd.c \
        ft_calloc.c \
 
+BONUS = ft_lstadd_back_bonus.c \
+	ft_lstadd_front_bonus.c \
+	ft_lstdelone_bonus.c \
+	ft_lstlast_bonus.c \
+	ft_lstnew_bonus.c \
+	ft_lstsize_bonus.c
 
 OBJ   = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra -Werror
@@ -64,6 +70,10 @@ $(NAME):
 	gcc -c $(FLAGS) $(SRCS) -I $(HEAD)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+
+
+bonus:
+	gcc -c $(FLAGS) $(BONUS) -I $(HEAD)
 
 clean:
 	rm -f $(OBJ)

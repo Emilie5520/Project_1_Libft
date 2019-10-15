@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/14 15:03:45 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/14 17:32:04 by edouvier         ###   ########.fr       */
+/*   Created: 2019/10/11 16:22:51 by edouvier          #+#    #+#             */
+/*   Updated: 2019/10/15 12:14:14 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	if (lst == NULL)
-		return (NULL);
-	return (ft_lstsize(lst->next) + 1);
+	t_list	*add;
+
+	add = (*alst);
+	new->next = add;
 }

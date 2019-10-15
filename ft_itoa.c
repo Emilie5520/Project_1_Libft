@@ -6,21 +6,19 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:33:51 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/14 18:36:27 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/15 10:25:46 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdupl(const char *s)
 {
-	int	i;
-	int	j;
-	int	k;
-	char		*dest;
-	char		*src;
+	int		i;
+	int		j;
+	int		k;
+	char	*dest;
+	char	*src;
 
 	i = 0;
 	j = 0;
@@ -42,7 +40,7 @@ char	*ft_strdupl(const char *s)
 	return (dest);
 }
 
-int		is_malloc(int n)
+int	is_malloc(int n)
 {
 	int	count;
 
@@ -58,7 +56,7 @@ int		is_malloc(int n)
 char	*ft_itoa(int n)
 {
 	char		*str;
-	int		count;
+	int			count;
 	long int	num;
 
 	count = 0;
@@ -86,13 +84,3 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
-/*
-int		main(int ac, char **av)
-{
-	if (ac != 2)
-		return (0);
-
-	long int nb = atoi(av[1]);
-	printf("%s\n", ft_itoa(nb));
-	return (0);
-}*/
