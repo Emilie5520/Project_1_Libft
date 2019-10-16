@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 13:57:25 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/15 13:15:11 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/16 12:01:58 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*nouvelElement;
-	
-	nouvelElement = malloc(sizeof(content));
-	if (nouvelElement == NULL)
-		return (NULL);
-	nouvelElement->content = content;
-	nouvelElement->next = NULL;
+	t_list	*nouvelelement;
 
-	return (nouvelElement);
+	nouvelelement = malloc(sizeof(content));
+	if (nouvelelement == NULL)
+		return (NULL);
+	nouvelelement->content = content;
+	nouvelelement->next = NULL;
+	return (nouvelelement);
 }
