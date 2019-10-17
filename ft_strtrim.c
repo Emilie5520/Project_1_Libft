@@ -6,13 +6,13 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 11:07:56 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/17 10:59:09 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/17 12:56:45 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen_trim(char const *str)
+int		ft_strlen_trim(char const *str)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int	ft_strlen_trim(char const *str)
 	return (i);
 }
 
-int	is_charset(char const *charset, char c)
+int		is_charset(char const *charset, char c)
 {
 	int	i;
 

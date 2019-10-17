@@ -6,7 +6,7 @@
 #    By: edouvier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/08 12:34:35 by edouvier          #+#    #+#              #
-#    Updated: 2019/10/17 12:07:22 by edouvier         ###   ########.fr        #
+#    Updated: 2019/10/17 15:30:40 by edouvier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,9 +59,11 @@ BONUS = ft_lstadd_back_bonus.c \
 	ft_lstlast_bonus.c \
 	ft_lstnew_bonus.c \
 	ft_lstsize_bonus.c \
-	ft_lstclear_bonus.c
+	ft_lstclear_bonus.c \
+	ft_lstiter_bonus.c
 
 OBJ   = $(SRCS:.c=.o)
+OBJ_BONUS = $(BONUS:.c=.o)
 FLAGS = -Wall -Wextra -Werror
 HEAD  = includes
 
@@ -75,6 +77,8 @@ $(NAME):
 
 bonus:
 	gcc -c $(FLAGS) $(BONUS) -I $(HEAD)
+	ar rc $(NAME) $(OBJ_BONUS)
+	ranlib $(NAME)
 
 clean:
 	rm -f $(OBJ)

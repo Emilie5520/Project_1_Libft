@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:33:51 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/16 13:01:53 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/17 12:56:09 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_strdupl(const char *s)
 	return (dest);
 }
 
-int	is_malloc(int n)
+int		is_malloc(int n)
 {
 	int	count;
 

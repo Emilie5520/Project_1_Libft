@@ -6,13 +6,13 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:54:07 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/17 11:31:35 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/17 15:05:54 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	strlen_like(char *str, char c)
+int		strlen_like(char *str, char c)
 {
 	int	i;
 	int	j;
@@ -28,7 +28,7 @@ int	strlen_like(char *str, char c)
 	return (i - j);
 }
 
-int	count_words(char *str, char c)
+int		count_words(char *str, char c)
 {
 	int	i;
 	int	count;
@@ -37,7 +37,8 @@ int	count_words(char *str, char c)
 	count = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] == c && str[i + 1] != c) || str[i + 1] == '\0')
+		if ((str[i] != c && str[i + 1] == c)
+				|| (str[i] != c && str[i + 1] == '\0'))
 			count += 1;
 		i++;
 	}
