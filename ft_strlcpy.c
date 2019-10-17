@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:30:25 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/15 10:55:38 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/17 10:35:19 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n)
 
 	i = 0;
 	j = 0;
+	if (dest == NULL && src == NULL)
+		return (0);
 	while (src[j] != '\0')
 		j++;
 	while (i < n)

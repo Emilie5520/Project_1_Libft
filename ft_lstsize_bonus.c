@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 15:03:45 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/15 13:22:57 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/17 11:47:41 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,15 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	if (lst == NULL)
-		return (0);
-	return (ft_lstsize(lst->next) + 1);
+	int	i;
+	t_list	*tmp;
+
+	i = 0;
+	tmp = lst;
+	while (tmp)
+	{
+		i++;
+		tmp = tmp->next;
+	}
+	return (i);
 }
