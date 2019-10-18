@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 17:01:53 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/17 10:41:50 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/18 10:36:36 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	i = 0;
 	len = nmemb * size;
-	if (nmemb == 0 || size == 0)
-		return (NULL);
 	pointeur = (void **)malloc(sizeof(void *) * len);
 	if (pointeur == NULL)
 		return (NULL);

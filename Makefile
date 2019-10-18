@@ -6,11 +6,11 @@
 #    By: edouvier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/08 12:34:35 by edouvier          #+#    #+#              #
-#    Updated: 2019/10/17 15:30:40 by edouvier         ###   ########.fr        #
+#    Updated: 2019/10/18 14:12:31 by edouvier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 
 NAME = libft.a
 
@@ -65,23 +65,27 @@ BONUS = ft_lstadd_back_bonus.c \
 OBJ   = $(SRCS:.c=.o)
 OBJ_BONUS = $(BONUS:.c=.o)
 FLAGS = -Wall -Wextra -Werror
-HEAD  = includes
+HEAD  = libft.h
 
 all: $(NAME)
 
-$(NAME):
-	gcc -c $(FLAGS) $(SRCS) -I $(HEAD)
+$(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
+bonus: .bonus
 
-bonus:
-	gcc -c $(FLAGS) $(BONUS) -I $(HEAD)
-	ar rc $(NAME) $(OBJ_BONUS)
+.bonus: $(OBJ_BONUS) $(OBJ)
+	ar rc $(NAME) $(OBJ) $(OBJ_BONUS)
 	ranlib $(NAME)
+	@touch .bonus
+
+%.o : %.c $(HEAD) Makefile
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJ_BONUS)
+	@rm -f .bonus
 
 fclean: clean
 	rm -f $(NAME)

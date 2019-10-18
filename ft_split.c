@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:54:07 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/17 15:05:54 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/18 14:59:08 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,10 @@ char	*strdup_like(char *src, char c)
 	j = 0;
 	dest = (char *)malloc(sizeof(char) * (strlen_like(src, c) + 1));
 	if (dest == NULL)
+	{
+		free(dest);
 		return (NULL);
+	}
 	while (src[i] != '\0' && src[i] != c)
 	{
 		dest[i] = src[i];
@@ -75,7 +78,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	str = (char *)s;
-	if (s == NULL || c == 0)
+	if (s == NULL)
 		return (NULL);
 	res = (char **)malloc(sizeof(char *) * count_words(str, c) + 1);
 	if (res == NULL)
