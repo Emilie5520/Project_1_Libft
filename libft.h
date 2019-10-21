@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:18:14 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/18 13:36:47 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/21 13:51:22 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strlen(const char *str);
-char				*ft_strchr(char *s, int c);
-char				*ft_strrchr(char *s, int c);
-int					ft_strncmp(char *s1, char *s2, int n);
+char				*ft_strchr(const char *s, int c);
+char				*ft_strrchr(const char *s, int c);
+int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
@@ -40,10 +40,10 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
-unsigned int		ft_strlcpy(char *dest, char *src, unsigned int size);
-unsigned int		ft_strlcat(char *dest, char *src, unsigned int size);
-int					ft_atoi(char *str);
-char				*ft_strnstr(char *str, char *c, int n);
+size_t				ft_strlcpy(char *dest, const char *src, size_t size);
+size_t				ft_strlcat(char *dest, const char *src, size_t size);
+int					ft_atoi(const char *str);
+char				*ft_strnstr(const char *str, const char *c, size_t n);
 char				*ft_strdup(const char *s);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);

@@ -6,34 +6,36 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:26:05 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/18 13:49:14 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/21 10:45:33 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sign;
-	int	result;
+	int		i;
+	int		sign;
+	int		result;
+	char	*s;
 
 	i = 0;
 	sign = 1;
 	result = 0;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\r'
-			|| str[i] == '\v' || str[i] == '\f' || str[i] == ' ')
+	s = (char*)str;
+	while (s[i] == '\t' || s[i] == '\n' || s[i] == '\r'
+			|| s[i] == '\v' || s[i] == '\f' || s[i] == ' ')
 		i++;
-	if (str[i] == '+')
+	if (s[i] == '+')
 		i++;
-	else if (str[i] == '-')
+	else if (s[i] == '-')
 	{
 		sign = -1;
 		i++;
 	}
-	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
+	while (s[i] && (s[i] >= '0' && s[i] <= '9'))
 	{
-		result = result * 10 + str[i] - '0';
+		result = result * 10 + s[i] - '0';
 		i++;
 	}
 	return (result * sign);
