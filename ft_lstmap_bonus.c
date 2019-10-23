@@ -6,7 +6,7 @@
 /*   By: edouvier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 15:17:22 by edouvier          #+#    #+#             */
-/*   Updated: 2019/10/21 14:01:17 by edouvier         ###   ########.fr       */
+/*   Updated: 2019/10/23 11:40:37 by edouvier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new->next = NULL;
 		if (!start)
 			start = new;
-		ft_lstadd_back(&last, new);
+		ft_lstadd_back(&start, new);
 		last = new;
 		lst = lst->next;
 	}
